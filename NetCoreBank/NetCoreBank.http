@@ -1,0 +1,6 @@
+@NetCoreBank_HostAddress = http://localhost:5107
+
+GET {{NetCoreBank_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
