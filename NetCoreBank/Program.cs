@@ -13,6 +13,13 @@ builder.Services.AddSwaggerGen();
 
 //cors (cross origins resource server)
 
+builder.Services.AddCors(cors =>
+{
+    cors.AddPolicy("YZL3176",opt =>
+    {
+        opt.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 
 builder.Services.AddDbContext<MyContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection")));
